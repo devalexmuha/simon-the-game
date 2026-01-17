@@ -1,0 +1,158 @@
+:root {
+  --main-color: #011f3f;
+  --light-color: #FEF2BF;
+  --white-color: #fff;
+  --simon-first-color: #008000;
+  --simon-second-color: #ff0000;
+  --simon-third-color: #ffff00;
+  --simon-fourth-color: #0000ff;
+  --container-width: 1200px;
+  --container-spacing: 20px;
+  --title-font:'Press Start 2P', cursive;
+  --main-font: cursive;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font);
+  background: var(--main-color);
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+}
+
+button{
+  border: none;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-spacing) * 2);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--container-spacing);
+}
+
+/* Headings */
+
+.title {
+  font-weight: 900;
+  font-family: var(--title-font);
+}
+
+.title--lg {
+  font-size: 3rem;
+}
+
+.title--light{
+  color: var(--light-color);
+}
+
+.hero{
+  padding: 5rem;
+}
+
+.hero__inner{
+  text-align: center;
+}
+
+.simon-game__inner{
+  display: flex;
+  justify-content: center;
+}
+
+.simon-game__board{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 3.125rem;
+  width: 30.625rem;
+  height: 30.625rem;
+}
+
+.simon-game__pad{
+  width: 100%;
+  height: 100%;
+  border: solid black 10px;
+  border-radius: 20%;
+}
+
+.simon-game__pad--selected{
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.simon-game__pad--first{
+ background: var(--simon-first-color); 
+}
+
+.simon-game__pad--second{
+  background: var(--simon-second-color); 
+
+}
+
+.simon-game__pad--third{
+  background: var(--simon-third-color); 
+
+}
+
+.simon-game__pad--fourth{
+  background: var(--simon-fourth-color); 
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.footer__text{
+  color: var(--white-color);
+}
+
+.wrapper--game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+@media(max-width: 800px){
+  html{
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 600px){
+  html{
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 450px){
+  html{
+    font-size: 10px;
+  }
+}
